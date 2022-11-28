@@ -222,67 +222,79 @@ FACEBOOK: https://www.facebook.com/themefisher
     <form >
       <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          <label for="inputEmail4">Chủ sở hữu</label>
+          <input type="chusohuu" class="form-control" id="inputEmail4" placeholder="Tên">
         </div>
         <div class="form-group col-md-6">
-          <label for="inputPassword4">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          <label for="inputPassword4">Địa chỉ</label>
+          <input type="address" class="form-control" id="inputPassword4" placeholder="(Số nhà, Đường, Phường, Quận)">
         </div>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-      </div>
-      <div class="form-group">
-        <label for="inputAddress2">Address 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
       </div>
       <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputVT">Vị trí</label>
+            <select id="inputVT" class="form-control">
+              
+              <option selected>...</option>
+              <option>Mặt tiền</option>
+              <option>Hẻm cụt</option>
+              <option>Hẻm thông</option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputtype">Loại hình nhà ở</label>
+            <input type="text" class="form-control" id="inputtype" placeholder="Nhà đất, Biệt thự, Căn hộ">
+          </div>
+        </div>
+      <div class="form-row">
         <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity">
+          <label for="inputDT">Diện tích sử dụng</label>
+          <input type="text" class="form-control" id="inputDT">
         </div>
+        <div class="form-group col-md-6">
+          <label for="inputDTD">Diện tích đất</label>
+          <input type="text" class="form-control" id="inputDTD">
+        </div>
+        
+      </div>
+      <div class="form-row">
         <div class="form-group col-md-4">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
+          <label for="inputZip">Up ảnh</label>
           <input type="file" class="form-control" id="inputZip" multiple>
         </div>
       </div>
-
-
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity">
+        <label for="inputprices">Giá mong muốn</label>
+        <input type="text" class="form-control" id="inputprices">
       </div>
-      <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option selected>quan 4...</option>
-          <option>...</option>
-        </select>
+      <div class="form-group col-md-6">
+        <label for="inputDT">Giá dự đoán</label>
+        <input type="text" class="form-control" id="inputDT">
       </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputZip">Số phòng ngủ</label>
         <input type="text" class="form-control" id="inputZip">
       </div>
+      <div class="form-group col-md-6">
+        <label for="inputAddress">Tổng số tầng</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="">
+      </div>
     </div>
-    <div class="form-group">
-      <label for="inputAddress">Address</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputAddress2">Chiều rộng đường</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputAddress2">Loại đường</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="1 xe máy, 2 xe máy, 1 ô tô, 2 ô tô">
+        </div>
+
     </div>
-    <div class="form-group">
-      <label for="inputAddress2">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
+    
     <button type="submit" class="btn btn-primary">Đăng kí</button>
   </form>
   </div>
@@ -298,13 +310,7 @@ FACEBOOK: https://www.facebook.com/themefisher
               labore et dolore magna aliqua.</p>
             <div class="footer-social">
               <ul>
-                <li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
-                      class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
-                      class="fab fa-instagram"></i></a></li>
-                <li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
+                
               </ul>
             </div><!-- Footer social end -->
           </div><!-- Col end -->
