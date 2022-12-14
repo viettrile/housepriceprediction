@@ -32,7 +32,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 ================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Construction Html5 Template">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"> 
   <meta name=author content="Themefisher">
   <meta name=generator content="Themefisher Constra HTML Template v1.0">
 
@@ -54,8 +54,9 @@ FACEBOOK: https://www.facebook.com/themefisher
   <!-- Colorbox -->
   <link rel="stylesheet" href="plugins/colorbox/colorbox.css">
   <!-- Template styles-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <div class="body-inner">
@@ -148,8 +149,8 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Ký gửi bán nhà  <i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu" role="menu">
-                      <li><a href="about.html">Nhà TP.HCM</a></li>
-                      <li><a href="team.html">Nhà Bình Dương</a></li>
+                      <li><a href="about.html">Đăng tin</a></li>
+                      <li><a href="team.html">Phân tích giá</a></li>
                      <!-- <li><a href="testimonials.html">Đất nền </a></li>
                       <li><a href="faq.html">Faq</a></li>
                       <li><a href="pricing.html">Pricing</a></li>-->
@@ -195,29 +196,111 @@ FACEBOOK: https://www.facebook.com/themefisher
     <!--/ Container end -->
 
   </div>
+
   <!--/ Navigation end -->
 </header>
 <!--/ Header end -->
-<div id="banner-area" class="banner-area" style="background-image:url(images/banner/banner1.jpg)">
-  <div class="banner-text">
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-              <div class="banner-heading">
-                <h1 class="banner-title">Project</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">Project</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">All Projects</li>
-                    </ol>
-                </nav>
-              </div>
-          </div><!-- Col end -->
-        </div><!-- Row end -->
-    </div><!-- Container end -->
-  </div><!-- Banner text end -->
-</div><!-- Banner area end --> 
+
+<!--filter -->
+<div class="container ">
+  <div class="d-flex p-2  flex-wrap">
+
+    <div class="input-group m-3 " style="width: 150px;">
+      <select class="custom-select" style="height:50px;" id="inputGroupSelect02">
+        <option selected>Loại nhà</option>
+        <option value="1">Tất cả nhà</option>
+        <option value="2">Biệt thự</option>
+        <option value="3">Căn hộ</option>
+        <option value="4">Nhà đất</option>
+      </select>
+    </div>
+    <div class="input-group m-3 " style="width: 150px; ">
+      <select class="custom-select" style="height:50px;" id="inputGroupSelect02">
+        <option selected>Phân khúc...</option>
+        <option value="1">Bình dân</option>
+        <option value="2">Trung cấp</option>
+        <option value="3">Cao cấp</option>
+        <option value="4">Siêu cao cấp</option>
+      </select>
+    </div>
+     <!--multi select-->
+     <script src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    
+    <div class="m-3" style="width: 250px;">
+        <div class="col-md-12"> <select id="choices-multiple-remove-button" placeholder="Select condition" multiple>
+                <option value="HTML">HTML</option>
+                <option value="Jquery">Jquery</option>
+                <option value="CSS">CSS</option>
+                <option value="Bootstrap 3">Bootstrap 3</option>
+                <option value="Bootstrap 4">Bootstrap 4</option>
+                <option value="Java">Java</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Angular">Angular</option>
+                <option value="Python">Python</option>
+                <option value="Hybris">Hybris</option>
+                <option value="SQL">SQL</option>
+                <option value="NOSQL">NOSQL</option>
+                <option value="NodeJS">NodeJS</option>
+            </select> 
+        </div>
+        </div>
+    <!--end multi select-->
+
+<!-- Button trigger modal --> 
+<button type="button" class="btn border m-3 btn-warning " style="height:50px; width: 170px;" data-toggle="modal" data-target="#exampleModal">
+  Lọc theo giá <i class="fa-solid fa-money-bill"></i>
+</button>
+
+<!-- Modal price-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Lọc Giá:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <!--slider double-->
+
+
+          <div class="range-slide d-flex flex-row flex-nowrap h-25  justify-content-between">
+        
+            <div class="mt-4">Min: <span id="min"  >0</span></div>
+
+            <div class="slide">
+              <div class="line" id="line" style="left: 0%; right: 0%;"></div>
+              <span class="thumb" id="thumbMin" style="left: 0%;"></span>
+              <span class="thumb" id="thumbMax" style="left: 100%;"></span>
+            </div>
+            <input id="rangeMin" type="range" max="100" min="0" step="5" value="0">
+            <input id="rangeMax" type="range" max="100" min="0" step="5" value="100">
+            <div class="mt-4">Max: <span id="max" >100</span></div>
+        </div>
+        <!--end slider double-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning">Áp dụng</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+    <!--end  Modal price-->
+  
+
+  </div>
+</div>
+
+
+
 
 <section id="main-container" class="main-container">
   <div class="container">
@@ -225,18 +308,14 @@ FACEBOOK: https://www.facebook.com/themefisher
       <div class="col-12">
         <div class="shuffle-btn-group">
           <label class="active" for="all">
-
+            HOME
           </label>
       
         </div><!-- project filter end -->
- 
 
-  
-
-  
 </div>
 
-<section class="call-to-action-box no-padding">
+<section class="call-to-action-box no-padding col-12"> 
   <div class="container">
     <div class="action-style-box">
         <div class="row align-items-center">
@@ -247,7 +326,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           </div><!-- Col end -->
           <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
               <div class="call-to-action-btn">
-                <a class="btn btn-dark" href="#">Liên hệ ngay</a>
+                <a class="btn btn-dark" href="contact.html">Liên hệ ngay</a>
               </div>
           </div><!-- col end -->
         </div><!-- row end -->
@@ -318,55 +397,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           </div><!-- Content row 1 end -->
         </div><!-- Col end -->
 
-        <div class="col-lg-6 mt-4 mt-lg-0">
-          <h3 class="into-sub-title">Our Values</h3>
-          <p>Minim Austin 3 wolf moon scenester aesthetic, umami odio pariatur bitters. Pop-up occaecat taxidermy street art, tattooed beard literally.</p>
-
-          <div class="accordion accordion-group" id="our-values-accordion">
-              <div class="card">
-                <div class="card-header p-0 bg-transparent" id="headingOne">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                          Safety
-                      </button>
-                    </h2>
-                </div>
-              
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#our-values-accordion">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
-                    </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header p-0 bg-transparent" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Customer Service
-                      </button>
-                    </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#our-values-accordion">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
-                    </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header p-0 bg-transparent" id="headingThree">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Integrity
-                      </button>
-                    </h2>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#our-values-accordion">
-                    <div class="card-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidata
-                    </div>
-                </div>
-              </div>
-          </div>
+        
           <!--/ Accordion end -->
 
         </div><!-- Col end -->
@@ -374,57 +405,8 @@ FACEBOOK: https://www.facebook.com/themefisher
   </div><!-- Container end -->
 </section><!-- Feature are end -->
 
-<section id="facts" class="facts-area dark-bg">
-  <div class="container">
-    <div class="facts-wrapper">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 ts-facts">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact1.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="1789">0</span></h2>
-                <h3 class="ts-facts-title">Total Projects</h3>
-              </div>
-          </div><!-- Col end -->
 
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact2.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="647">0</span></h2>
-                <h3 class="ts-facts-title">Staff Members</h3>
-              </div>
-          </div><!-- Col end -->
-
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact3.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="4000">0</span></h2>
-                <h3 class="ts-facts-title">Hours of Work</h3>
-              </div>
-          </div><!-- Col end -->
-
-          <div class="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
-              <div class="ts-facts-img">
-                <img loading="lazy" src="images/icon-image/fact4.png" alt="facts-img">
-              </div>
-              <div class="ts-facts-content">
-                <h2 class="ts-facts-num"><span class="counterUp" data-count="44">0</span></h2>
-                <h3 class="ts-facts-title">Countries Experience</h3>
-              </div>
-          </div><!-- Col end -->
-
-        </div> <!-- Facts end -->
-    </div>
-    <!--/ Content row end -->
-  </div>
-  <!--/ Container end -->
-</section><!-- Facts end -->
-
+<!--
 <section id="ts-service-area" class="ts-service-area pb-0">
   <div class="container">
     <div class="row text-center">
@@ -433,7 +415,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           <h3 class="section-sub-title">What We Do</h3>
         </div>
     </div>
-    <!--/ Title row end -->
+    <!--/ Title row end 
 
     <div class="row">
         <div class="col-lg-4">
@@ -445,7 +427,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <h3 class="service-box-title"><a href="#">Home Construction</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
               </div>
-          </div><!-- Service 1 end -->
+          </div><!-- Service 1 end 
 
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
@@ -455,7 +437,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <h3 class="service-box-title"><a href="#">Building Remodels</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
               </div>
-          </div><!-- Service 2 end -->
+          </div><!-- Service 2 end 
 
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
@@ -465,13 +447,13 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <h3 class="service-box-title"><a href="#">Interior Design</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
               </div>
-          </div><!-- Service 3 end -->
+          </div><!-- Service 3 end 
 
-        </div><!-- Col end -->
+        </div><!-- Col end 
 
         <div class="col-lg-4 text-center">
           <img loading="lazy" class="img-fluid" src="images/services/service-center.jpg" alt="service-avater-image">
-        </div><!-- Col end -->
+        </div><!-- Col end 
 
         <div class="col-lg-4 mt-5 mt-lg-0 mb-4 mb-lg-0">
           <div class="ts-service-box d-flex">
@@ -482,7 +464,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <h3 class="service-box-title"><a href="#">Exterior Design</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
               </div>
-          </div><!-- Service 4 end -->
+          </div><!-- Service 4 end 
 
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
@@ -492,7 +474,7 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <h3 class="service-box-title"><a href="#">Renovation</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
               </div>
-          </div><!-- Service 5 end -->
+          </div><!-- Service 5 end 
 
           <div class="ts-service-box d-flex">
               <div class="ts-service-box-img">
@@ -502,13 +484,15 @@ FACEBOOK: https://www.facebook.com/themefisher
                 <h3 class="service-box-title"><a href="#">Safety Management</a></h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
               </div>
-          </div><!-- Service 6 end -->
-        </div><!-- Col end -->
-    </div><!-- Content row end -->
+          </div><!-- Service 6 end 
+        </div><!-- Col end 
+    </div><!-- Content row end 
 
   </div>
-  <!--/ Container end -->
+  <!--/ Container end 
 </section><!-- Service end -->
+
+
 
 <section id="project-area" class="project-area solid-bg">
   <div class="container">
@@ -524,9 +508,9 @@ FACEBOOK: https://www.facebook.com/themefisher
       <div class="col-12">
         <div class="shuffle-btn-group">
           <label class="active" for="all">
-            <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
+            <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Bất động sản dành cho bạn
           </label>
-          <label for="commercial">
+          <!--<label for="commercial">
             <input type="radio" name="shuffle-filter" id="commercial" value="commercial">Commercial
           </label>
           <label for="education">
@@ -559,9 +543,9 @@ FACEBOOK: https://www.facebook.com/themefisher
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="projects-single.html">Capital Teltway Building</a>
+                    
                   </h3>
-                  <p class="project-cat">Commercial, Interiors</p>
+                  
                 </div>
               </div>
             </div>
@@ -576,9 +560,9 @@ FACEBOOK: https://www.facebook.com/themefisher
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="projects-single.html">Ghum Touch Hospital</a>
+                  
                   </h3>
-                  <p class="project-cat">Healthcare</p>
+                 
                 </div>
               </div>
             </div>
@@ -593,9 +577,9 @@ FACEBOOK: https://www.facebook.com/themefisher
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="projects-single.html">TNT East Facility</a>
+                   
                   </h3>
-                  <p class="project-cat">Government</p>
+                  
                 </div>
               </div>
             </div>
@@ -610,9 +594,9 @@ FACEBOOK: https://www.facebook.com/themefisher
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="projects-single.html">Narriot Headquarters</a>
+               
                   </h3>
-                  <p class="project-cat">Infrastructure</p>
+                  
                 </div>
               </div>
             </div>
@@ -627,9 +611,9 @@ FACEBOOK: https://www.facebook.com/themefisher
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="projects-single.html">Kalas Metrorail</a>
+                 
                   </h3>
-                  <p class="project-cat">Infrastructure</p>
+                  
                 </div>
               </div>
             </div>
@@ -644,9 +628,9 @@ FACEBOOK: https://www.facebook.com/themefisher
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="projects-single.html">Ancraft Avenue House</a>
+                    
                   </h3>
-                  <p class="project-cat">Residential</p>
+                 
                 </div>
               </div>
             </div>
@@ -656,7 +640,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
       <div class="col-12">
         <div class="general-btn text-center">
-          <a class="btn btn-primary" href="projects.html">View All Projects</a>
+          <a class="btn btn-primary" href="projects.html">Xem thêm</a>
         </div>
       </div>
 
@@ -735,7 +719,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
         <div class="col-lg-6 mt-5 mt-lg-0">
 
-          <h3 class="column-title">Happy Clients</h3>
+          <h3 class="column-title">Doanh nghiệp tiêu biểu</h3>
 
           <div class="row all-clients">
               <div class="col-sm-4 col-6">
@@ -822,8 +806,8 @@ FACEBOOK: https://www.facebook.com/themefisher
   <div class="container">
     <div class="row text-center">
         <div class="col-12">
-          <h2 class="section-title">Work of Excellence</h2>
-          <h3 class="section-sub-title">Recent Projects</h3>
+          
+          <h3 class="section-sub-title">Bất động sản theo địa điểm</h3>
         </div>
     </div>
     <!--/ Title row end -->
@@ -832,17 +816,16 @@ FACEBOOK: https://www.facebook.com/themefisher
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="latest-post">
               <div class="latest-post-media">
-                <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="images/news/news1.jpg" alt="img">
+                <a href="projects.html" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="images/projects/project1.jpg" alt="img">
                 </a>
               </div>
               <div class="post-body">
                 <h4 class="post-title">
-                    <a href="news-single.html" class="d-inline-block">We Just Completes $17.6 million Medical Clinic in Mid-Missouri</a>
+                    <a href="projects.html" class="d-inline-block">TP.Hồ Chí Minh</a>
                 </h4>
                 <div class="latest-post-meta">
                     <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> July 20, 2017
                     </span>
                 </div>
               </div>
@@ -852,42 +835,25 @@ FACEBOOK: https://www.facebook.com/themefisher
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="latest-post">
               <div class="latest-post-media">
-                <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="images/news/news2.jpg" alt="img">
+                <a href="projects-single.html" class="latest-post-img">
+                    <img loading="lazy" class="img-fluid" src="images/projects/project2.jpg" alt="img">
                 </a>
               </div>
               <div class="post-body">
                 <h4 class="post-title">
-                    <a href="news-single.html" class="d-inline-block">Thandler Airport Water Reclamation Facility Expansion Project Named</a>
+                    <a href="projects-single.html" class="d-inline-block">Bình Dương</a>
                 </h4>
                 <div class="latest-post-meta">
                     <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> June 17, 2017
+                      
                     </span>
                 </div>
               </div>
           </div><!-- Latest post end -->
         </div><!-- 2nd post col end -->
 
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="latest-post">
-              <div class="latest-post-media">
-                <a href="news-single.html" class="latest-post-img">
-                    <img loading="lazy" class="img-fluid" src="images/news/news3.jpg" alt="img">
-                </a>
-              </div>
-              <div class="post-body">
-                <h4 class="post-title">
-                    <a href="news-single.html" class="d-inline-block">Silicon Bench and Cornike Begin Construction Solar Facilities</a>
-                </h4>
-                <div class="latest-post-meta">
-                    <span class="post-item-date">
-                      <i class="fa fa-clock-o"></i> Aug 13, 2017
-                    </span>
-                </div>
-              </div>
-          </div><!-- Latest post end -->
-        </div><!-- 3rd post col end -->
+        
+        
     </div>
     <!--/ Content row end -->
 
@@ -904,7 +870,7 @@ FACEBOOK: https://www.facebook.com/themefisher
     <div class="footer-main">
       <div class="container">
         <div class="row justify-content-between">
-          <div class="col-lg-4 col-md-6 footer-widget footer-about">
+          <div class="col-lg-8 col-md-2 footer-widget footer-about">
             <h3 class="widget-title">Thông tin công ty</h3>
             <img loading="lazy" width="200px" class="footer-logo" src="images/footer-logo.jpg" alt="Constra">
             <p>Goda Land</p>
@@ -914,7 +880,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
           </div><!-- Col end -->
 
-          <div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
+          <div class="col-lg-2 col-md-2 footer-widget mt-5 mt-md-0">
             <h3 class="widget-title">Giờ làm việc</h3>
             <div class="working-hours">
                7 ngày trong tuần bao gồm lễ.
@@ -960,6 +926,7 @@ FACEBOOK: https://www.facebook.com/themefisher
 
   <!-- initialize jQuery Library -->
   <script src="plugins/jQuery/jquery.min.js"></script>
+
   <!-- Bootstrap jQuery -->
   <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
   <!-- Slick Carousel -->
@@ -970,7 +937,7 @@ FACEBOOK: https://www.facebook.com/themefisher
   <!-- shuffle -->
   <script src="plugins/shuffle/shuffle.min.js" defer></script>
 
-
+  <script src="plugins/jQuery/index.js"></script>
   <!-- Google Map API Key-->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
   <!-- Google Map Plugin-->
